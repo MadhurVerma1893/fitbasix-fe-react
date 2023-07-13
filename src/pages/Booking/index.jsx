@@ -26,12 +26,10 @@ import "./style.css";
 import { useNavigate } from "react-router-dom";
 import { postDialog } from "../../api/services";
 import { useState } from "react";
+import { Card } from "antd";
 
-
-
-
-const ITEM_HEIGHT = 48
-const ITEM_PADDING_TOP = 8
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
 const MenuProps = {
   PaperProps: {
     style: {
@@ -39,15 +37,16 @@ const MenuProps = {
       width: 250,
     },
   },
-}
+};
 
 const Booking = () => {
-  const[labelWidth,setLabelWidth]=useState('');
+  const [labelWidth, setLabelWidth] = useState("");
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
   //Search Params String
   const [searchParams, setSearchParams] = useState(window.location.search);
   const onSubmit = async (data) => {
+    console.log(data, "dataa");
     data.formType = "FreeTrial";
 
     const response = await postDialog(data, searchParams);
@@ -59,153 +58,160 @@ const Booking = () => {
     }
   };
 
-
-  
-
   return (
     <form id="getStarted" onSubmit={handleSubmit(onSubmit)}>
-        
       <div className="BookContainer">
-     
         <Grid container className="gridContainer">
           <Grid item xs={12} sm={8} md={8}>
             <Container className="booking_container">
               <Typography className="form_heading">
-                BOOK YOUR FIRST SESSION
+                <span className="text-black">BOOK YOUR</span>
+                <br /> FIRST SESSION
               </Typography>
-              <Grid container spacing={2}>
-                <Grid item sm={6} xs={12} md={6}>
-                  <TextField
-                    id="name"
-                    placeholder="First Name"
-                    required
-                    sx={{
-                      border: "1px solid #49AD50",
-                      borderRadius: "10px",
-                      width: "100%",
-                      input: {
-                       
-                        "&::placeholder": {
-                           color:"#0E0F13",
-                           opacity:1
+              <Card>
+                <Grid container spacing={2}>
+                  <Grid item sm={6} xs={12} md={6}>
+                    <TextField
+                      id="name"
+                      placeholder="First Name"
+                      required
+                      sx={{
+                        border: "1px solid #49AD50",
+                        borderRadius: "10px",
+                        backgroundColor: "#F0F0F0",
+                        width: "100%",
+                        input: {
+                          "&::placeholder": {
+                            color: "#0E0F13",
+                            opacity: 1,
+                          },
                         },
-                     }
-                
-                    }}
-                    {...register("firstName")}
-                  />
-                </Grid>
-                <Grid item sm={6} xs={12} md={6}>
-                  <TextField
-                    id="name"
-                    placeholder="Last Name"
-                    required
-                    sx={{
-                      border: "1px solid #49AD50",
-                      borderRadius: "10px",
-                      width: "100%",
-                      input: {
-                       
-                        "&::placeholder": {
-                           color:"#0E0F13",
-                           opacity:1
+                      }}
+                      {...register("firstName")}
+                    />
+                  </Grid>
+                  <Grid item sm={6} xs={12} md={6}>
+                    <TextField
+                      id="name"
+                      placeholder="Last Name"
+                      required
+                      sx={{
+                        border: "1px solid #49AD50",
+                        borderRadius: "10px",
+                        backgroundColor: "#F0F0F0",
+                        width: "100%",
+                        input: {
+                          "&::placeholder": {
+                            color: "#0E0F13",
+                            opacity: 1,
+                          },
                         },
-                     }
-                    }}
-                    {...register("lastName")}
-                  />
-                </Grid>
-                <Grid item sm={6} xs={12} md={6}>
-                  <TextField
-                    id="mobileNo"
-                    required
-                    placeholder="Mobile"
-                    sx={{
-                      border: "1px solid #49AD50",
-                      borderRadius: "10px",
-                      width: "100%",
-                      input: {
-                       
-                        "&::placeholder": {
-                           color:"#0E0F13",
-                           opacity:1
+                      }}
+                      {...register("lastName")}
+                    />
+                  </Grid>
+                  <Grid item sm={6} xs={12} md={6}>
+                    <TextField
+                      id="mobileNo"
+                      required
+                      placeholder="Mobile"
+                      sx={{
+                        border: "1px solid #49AD50",
+                        borderRadius: "10px",
+                        backgroundColor: "#F0F0F0",
+                        width: "100%",
+                        input: {
+                          "&::placeholder": {
+                            color: "#0E0F13",
+                            opacity: 1,
+                          },
                         },
-                     }
-                    }}
-                    {...register("number")}
-                  />
-                </Grid>
-                <Grid item sm={6} xs={12} md={6}>
-                  <TextField
-                    id="email"
-                    placeholder="Email id"
-                    sx={{
-                      border: "1px solid #49AD50",
-                      borderRadius: "10px",
-                      width: "100%",
-                      input: {
-                       
-                        "&::placeholder": {
-                           color:"#0E0F13",
-                           opacity:1
+                      }}
+                      {...register("number")}
+                    />
+                  </Grid>
+                  <Grid item sm={6} xs={12} md={6}>
+                    <TextField
+                      id="email"
+                      placeholder="Email id"
+                      sx={{
+                        border: "1px solid #49AD50",
+                        borderRadius: "10px",
+                        backgroundColor: "#F0F0F0",
+                        width: "100%",
+                        input: {
+                          "&::placeholder": {
+                            color: "#0E0F13",
+                            opacity: 1,
+                          },
                         },
-                     }
-                    }}
-                    {...register("email")}
-                  />
-                </Grid>
-             
-                <Grid item sm={6} xs={12} md={6}>
-                <Select
-                    displayEmpty={true}
-                    // className="textFieldMobile"
-                    sx={{
-                      border: "1px solid #49AD50",
-                      borderRadius: "10px",
-                      width: "100%",
-                    }}
-                    {...register("workOutType")}
+                      }}
+                      {...register("email")}
+                    />
+                  </Grid>
+
+                  <Grid item sm={6} xs={12} md={6}>
+                    <Select
+                      displayEmpty={true}
+                      sx={{
+                        border: "1px solid #49AD50",
+                        borderRadius: "10px",
+                        backgroundColor: "#F0F0F0",
+                        width: "100%",
+                      }}
+                      {...register("timeSlot")}
+                    >
+                      <MenuItem disabled>
+                        Preferred Time Slot for Callback
+                      </MenuItem>
+                      <MenuItem value={"Morning"}>Morning</MenuItem>
+                      <MenuItem value={"Afternoon"}>Afternoon</MenuItem>
+                      <MenuItem value={"Evening"}>Evening</MenuItem>
+                      <MenuItem value={"Night"}>Night</MenuItem>
+                    </Select>
+                  </Grid>
+                  <Grid
+                    justifyContent="center"
+                    container
+                    item
+                    sm={6}
+                    xs={12}
+                    md={6}
                   >
-                    <MenuItem disabled>Types of plan</MenuItem>
-                    <MenuItem value={"Personal"}>Personal</MenuItem>
-                    <MenuItem value={"Yoga"}>Yoga</MenuItem>
-                    <MenuItem value={"Diet"}>Diet</MenuItem>
-                  </Select>
-                
-                 
-                </Grid>
-                <Grid item sm={6} xs={12} md={6}>
-                  <Select
-                 
-                    displayEmpty={true}
-                    sx={{
-                      border: "1px solid #49AD50",
-                      borderRadius: "10px",
-                      width: "100%",
-                    }}
-                    {...register("timeSlot")}
+                    {/* <Select
+                      displayEmpty={true}
+                      // className="textFieldMobile"
+                      sx={{
+                        border: "1px solid #49AD50",
+                        borderRadius: "10px",
+                        width: "100%",
+                      }}
+                      {...register("workOutType")}
+                    >
+                      <MenuItem disabled>Types of plan</MenuItem>
+                      <MenuItem value={"Personal"}>Personal</MenuItem>
+                      <MenuItem value={"Yoga"}>Yoga</MenuItem>
+                      <MenuItem value={"Diet"}>Diet</MenuItem>
+                    </Select> */}
+                    <Button type="submit" className="bookSubmit">
+                      Submit
+                    </Button>
+                  </Grid>
+                  {/* <Grid
+                    item
+                    sm={12}
+                    xs={12}
+                    md={12}
+                    sx={{ display: "flex", justifyContent: "center" }}
                   >
-                    <MenuItem disabled>
-                      Preferred Time Slot for Callback
-                    </MenuItem>
-                    <MenuItem value={"Morning"}>Morning</MenuItem>
-                    <MenuItem value={"Afternoon"}>Afternoon</MenuItem>
-                    <MenuItem value={"Evening"}>Evening</MenuItem>
-                    <MenuItem value={"Night"}>Night</MenuItem>
-                  </Select>
+                    <Button type="submit" className="bookSubmit">
+                      Submit
+                    </Button>
+                  </Grid> */}
                 </Grid>
-                <Grid item sm={12} xs={12} md={12} sx={{display:"flex",justifyContent:"center"}}>
-                  <Button
-                    type="submit"
-                    className="bookSubmit"
-                  >
-                    Submit
-                  </Button>
-                </Grid>
-              </Grid>
+              </Card>
             </Container>
           </Grid>
-          
         </Grid>
       </div>
     </form>

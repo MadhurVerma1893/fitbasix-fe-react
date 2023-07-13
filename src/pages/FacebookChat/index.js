@@ -6,8 +6,7 @@ function FacebookChat() {
     <div>
       <div>
         <div id="fb-root"></div>
-
-        <FacebookProvider appId="110214088548240" chatSupport>
+        <FacebookProvider appId="1139142833407342" chatSupport>
           <CustomChat pageId="110214088548240" attribution="biz_inbox" />
         </FacebookProvider>
       </div>

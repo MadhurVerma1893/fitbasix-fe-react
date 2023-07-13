@@ -39,7 +39,7 @@ const Landing = () => {
   return (
     <div className="landingContainer">
       <Helmet>
-        <title>Online Yoga Classes | Virtual Fitness Training</title>
+        <title>Virtual Training Session | Personal Training Simplified</title>
         <meta
           name="keywords"
           content="yoga training, online yoga classes, virtual yoga sessions, online yoga classes for beginners, live yoga sessions online, online fitness trainer, personal trainer online, virtual fitness training, personal trainer online, online workout programs, 1 on 1 personal training, certified personal trainer online, fitness program online, online personal training sessions, virtual fitness classes at home"
@@ -50,7 +50,7 @@ const Landing = () => {
         />
         <meta
           property="og:title"
-          content="Online Yoga Classes | Virtual Fitness Training"
+          content="Virtual Training Session | Personal Training Simplified"
         />
         <meta
           property="og:description"

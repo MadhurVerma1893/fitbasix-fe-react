@@ -1,37 +1,41 @@
 .homeContainer {
-  background-image: url("../../../assets/newLanding/HomeScreen.png");
+  background-image: url("../../../assets/newLanding/homeFirstScreen.png");
   background-size: cover;
   background-repeat: no-repeat;
-  
-  height: 103vh;
+  display: flex;
+  height: 110vh;
   color: #fff;
   z-index: -1;
 }
-.mob_Head_view{
-  margin-top:30px !important;
+.mob_Head_view {
+  margin-top: 30px !important;
 }
 .homeInnerContainer {
   padding: 2rem 4rem;
 }
 .title {
   font-weight: bold;
-  font-size: 4rem;
-  line-height: 4.5rem;
+  font-size: 56px;
+  line-height: 50px;
 }
 
 .sub-title {
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-size: 28px;
+  line-height: 39px;
 }
 .callUsBtn {
-  
   background-color: #49ad50 !important;
   border-radius: 1.5rem !important;
-  min-width: 20.5vw !important;
+  min-width: 12.5vw !important;
   font-size: 1.5rem;
   margin-bottom: 1rem !important;
   padding: 4px 10px 4px 10px !important;
   text-transform: none;
+}
+.form-div {
+  position: absolute;
+  right: 90px;
+  top: 90px;
 }
 
 .btn-whatsapp {
@@ -103,28 +107,35 @@
   border: none !important;
   background-color: #fff !important;
   color: black;
-  border-radius: 1rem !important;
+  border-radius: 10px !important;
   padding: 8px !important;
-  width: 130px !important;
-  height: 30px !important;
+  width: 140px !important;
+  height: 40px !important;
 }
 .appstore-style span {
-  font-size: 10px !important;
+  font-size: 9px !important;
 }
 
 @media only screen and (max-width: 767px) {
   .homeContainer {
-    height: 103vh;
+    height: 180vh;
     width: auto;
-    background-image: url("../../../assets/newLanding/HomeMobile.png");
+    background-image: url("../../../assets/newLanding/homeFirstScreenMobile.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
   .mob_Head_view {
-    text-align: end;
-    margin-top: 60vh !important;
+    /* text-align: end; */
+    margin-top: 20vh !important;
   }
 
+  .form-div {
+    position: absolute;
+    right: 10px;
+    left: 20px;
+    top: 500px;
+    width: 300px;
+  }
   .homelogo-style {
     display: none;
   }
@@ -141,7 +152,7 @@
     margin-top: 2rem;
     padding-top: 2rem;
     font-size: 1rem;
-    text-align: end;
+    /* text-align: end; */
     line-height: 1rem;
   }
   .knowMore-btn {
@@ -153,8 +164,8 @@
     font-weight: 500 !important;
   }
   .appstore-style {
-    width: 80px !important;
-    height: 12px !important;
+    width: 100px !important;
+    height: 30px !important;
   }
   .homeInnerContainer {
     padding: 1rem 1rem;
@@ -168,7 +179,17 @@
   .buttons-container {
     gap: 10px !important;
   }
-  .callUsBtn{
-    width:200px;
+  .callUsBtn {
+    width: 110px;
+    height: 24px;
+    font-size: 8px !important;
+  }
+  .FitLogo {
+    width: 100px;
+    height: 25px;
+  }
+  .callUsBtn > img {
+    width: 20px !important;
+    height: 20px !important;
   }
 }

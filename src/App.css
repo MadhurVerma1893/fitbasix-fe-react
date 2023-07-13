@@ -1,7 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 * {
   margin: 0;
   padding: 0;
-  font-family: "Wix Madefor Display", sans-serif !important ;
+  font-family: "Raleway", sans-serif !important ;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -16,6 +19,9 @@
 button:hover {
   background-color: #63b969 !important;
 }
-.stacked-carousel-responsive-container{
-  width:92% !important;
+.stacked-carousel-responsive-container {
+  width: 92% !important;
+}
+.ant-select .ant-select-selector {
+  background-color: #f0f0f0 !important;
 }

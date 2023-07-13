@@ -7,7 +7,7 @@
   /* background-image: url("../../../../assets/USERCARDBG.svg");
   background-size: cover; */
   border-radius: 27.027px;
-  background: linear-gradient(360deg, #0f410f 0%, #48d950 100%);
+  background: #ffffff;
   opacity: 1;
   display: flex;
   justify-content: space-around;
@@ -26,115 +26,97 @@
     margin-bottom: 3rem;
     padding: 2rem;
   }
- 
 }
 
-.user-div{
+.user-div {
   /* width:30vw; */
-  background-color:lightgray;
+  background-color: #ffffff;
   height: 230px;
   display: flex;
   justify-content: end;
   /* border-bottom: 1px solid #48d950; */
-
 }
-.content-div{
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-right: 10px;
-   
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 20px;
-    flex-direction: column;
-    gap: 10px;
+.content-div {
+  /* margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 10px; */
+
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-left: 20px; */
+  flex-direction: column;
+  gap: 10px;
 }
 
-.img-div{
+.img-div {
   position: absolute;
-   /* width:235px; */
-  left:15%;
-  top: 0%;
+  /* width:235px; */
+  left: 54%;
+  top: 3%;
   /* left:45px;
   top:45px; */
-
-
 }
-.col-div1{
+.col-div1 {
   position: absolute;
   bottom: 44px;
-  right:-87px
+  right: -87px;
   /* right: 10%;
   bottom : 20%; */
-
-
 }
-.col-div2{
+.col-div2 {
   position: absolute;
-  left:53px;
-  top:66px
+  left: 53px;
+  top: 66px;
   /* left:17%;
   top : 35%; */
-
-
 }
-.content-content{
-  background: linear-gradient(360deg, #0f410f 0%, #48d950 100%);
+.content-content {
+  background: #ffffff;
+  color: black;
   height: 300px;
-  width:315px;
+  width: 315px;
   border-radius: 10px;
-  
 }
-.content-name{
-  color:black;
+.content-name {
+  color: black;
   width: 315px;
   text-align: center;
-  
+  margin-top: 20%;
 }
-.content-para{
+.content-para {
   width: 75%;
   position: relative;
-  top:21px;
-  left:67px;
+  top: 10px;
+  left: 50px;
 }
 
-@media screen and (max-width:450px){
-  .img-div{
+@media screen and (max-width: 450px) {
+  .img-div {
     position: absolute;
     /* width:235px;
     left:12px;
     top:0px */
-    left:45px;
-    top:45px;
-  
-  
+    left: 44%;
+    top: 20%;
   }
-  .col-div1{
+  .col-div1 {
     position: absolute;
     /* bottom: 44px;
     right:-87px */
     right: 10%;
-    bottom : 20%;
-  
-  
+    bottom: 20%;
   }
-  .col-div2{
+  .col-div2 {
     position: absolute;
     /* left:53px;
     top:66px */
-    left:17%;
-    top : 35%;
-  
-  
-
+    left: 17%;
+    top: 35%;
   }
-  .content-div{
- 
+  .content-div {
     margin-left: 10px;
     margin-right: 10px;
-   
-    
-}
+  }
 }
