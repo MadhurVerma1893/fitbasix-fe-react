@@ -8,13 +8,13 @@
 .gridWrapper-nav {
   display: flex;
   justify-content: space-evenly;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 .call-btn button {
   background-color: #49ad50 !important;
   text-transform: none !important;
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
 }
 .appstore-style {
   background-color: transparent;
@@ -23,6 +23,14 @@
 .logo-nav img {
   /* padding: 1rem; */
   margin: 1rem 4rem 1rem 2rem;
+}
+
+.playstore-style1 {
+  background-color: #000000 !important;
+  border: none !important;
+  margin-bottom: 1rem;
+  height:0px;
+  font-size: 10px !important;
 }
 
 @media only screen and (max-width: 767px) {

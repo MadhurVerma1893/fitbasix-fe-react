@@ -30,7 +30,27 @@ const Navbar = () => {
         <Grid item xs={12} sm={6} className="playstore-btn">
           <Grid container spacing={3}>
             <Grid item xs={12} sm={8}>
-              <ButtonsContainer>
+            <div className="btnContainer" style={{display:"flex",gap:"20px",fontSize:"10px",justifyContent:"flex-end"}}>
+                {/* <ButtonsContainer> */}
+                  <AppStoreButton
+                  height="30px"
+                 
+                    url={iOSUrl}
+                    // width="45%"
+                    theme={"dark"}
+                    className={"playstore-style1"}
+                    linkProps={{fontSize:'10px'}}
+                    
+                  />
+                  <GooglePlayButton
+                  height="30px"
+                    url={APKUrl}
+                    theme={"dark"}
+                    className={"playstore-style1"}
+                  />
+                {/* </ButtonsContainer> */}
+              </div>
+              {/* <ButtonsContainer>
                 <AppStoreButton
                   url={iOSUrl}
                   theme={"dark"}
@@ -41,11 +61,11 @@ const Navbar = () => {
                   theme={"dark"}
                   className={"appstore-style"}
                 />
-              </ButtonsContainer>
+              </ButtonsContainer> */}
             </Grid>
-            <Grid item xs={12} sm={4} className="call-btn">
+            <Grid item xs={12} sm={4} className="call-btn" style={{marginTop:"2rem"}}>
               <Button variant="contained" onClick={() => setOpen(true)} sx={{textTransform:"initial"}}>
-                <span sx={{textTransform:"none"}}>Call us</span><span sx={{textTransform:"uppercase"}}>Now!</span>
+                <span sx={{textTransform:"none"}}>Call us &nbsp;</span><span sx={{textTransform:"uppercase"}}>Now!</span>
               </Button>
             </Grid>
           </Grid>
